@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ todo.title }}</title>
+</head>
+<body>
+    <h1>{{ todo.title }}</h1>
+    <p>{{ todo.description }}</p>
+    <p>Дата выполнения: {{ todo.due_date }}</p>
+    <p>Статус: {{ todo.status|yesno:"Выполнено,Не выполнено" }}</p>
+    <a href="{% url 'todos_list' %}">Назад</a>
+</body>
+</html>
